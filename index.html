@@ -3,22 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <title>Kalkulator Matematika Persegi</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Kalkulator Luas dan Keliling Persegi</h1>
-        <h3>Selamat datang di Laman Kalkulator Luas dan Keliling Persegi</h3>
-        <p>Laman ini digunakan untuk menghitung Luas dan Keliling Persegi dalam rangka menyelesaikan mini Project Revou</p>    
-    </header>
-    <div class="InputSection">
-        <label for="SquareSide" id="LabelSquareSide">Hitung Luas Persegi</label>
-        <input type="number" id="SquareSide">
+    <header><h2>Kalkulator Luas dan Keliling Persegi</h2>
+      <h3>Selamat datang di Laman Kalkulator Luas dan Keliling Persegi</h2>
+      <p>Laman ini digunakan untuk menghitung Luas dan Keliling Persegi dalam rangka menyelesaikan mini Project Revou</p>
+  </header>
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Luas')">Luas</button>
+      <button class="tablinks" onclick="openTab(event, 'Keliling')">Keliling</button>
+    </div>   
+    <div id="Luas" class="tabcontent">
+      <img src="img/bujur-sangkar.jpeg"   alt="gambar Persegi" style="width: 250px;height: 250px;">
+        <p>Rumus Luas Persegi adalah:</p>
+        <h4>L = s x s</h4>
+        <p>Dimana</p>
+        <p>L = Luas</p>
+        <p>s = Sisi</p>
+      <h3>Isi Sisi untuk Luas</h3>
+        <div><input class="inputbar" type="number" id="Sisi0"></div>
+        <button onclick="HitungLuas()">Hasil</button>
+        <button onclick="LuasReset()">Reset</button>
+      <h4>Hasil Perhitungan</h4>
+        <p id="Rumus0"></p>
+        <p id="Sisi6"></p>
+        <p id="Luas0"></p>
     </div>
-    <div class="Buttons">
-        <button id="CountButton">Hitung</button>
-        <button id="ResetButton">Reset</button>
+    <div id="Keliling" class="tabcontent">
+      <img src="img/bujur-sangkar.jpeg"   alt="gambar Persegi" style="width: 250px;height: 250px;">
+        <p>Rumus Keliling Persegi adalah:</p>
+        <h4>K = s x 4</h4>
+        <p>Dimana</p>
+        <p>K = Keliling</p>
+        <p>s = Sisi</p>
+      <h3>Isi Sisi untuk Keliling</h3>
+        <div><input class="inputbar" type="number" id="Sisi1"></div>
+        <button onclick="HitungKeliling()">Hasil</button>
+        <button onclick="KelReset()">Reset</button>
+      <h4>Hasil Perhitungan</h4>
+        <p id="Rumus1"></p>
+        <p id="Sisi7"></p>
+        <p id="Keliling0"></p>
     </div>
+    <script type="text/JavaScript" src="js/script.js"></script>
 </body>
 </html>
